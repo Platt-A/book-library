@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .book-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+
+            .book-card h3 {
+                margin: 0;
+            }
+
+            .book-card button {
+                margin-top: 10px;
+            }
+    </style>
+</head>
+<body>
+    <h1>My Library</h1>
+
+    <!-- Container for displaying books -->
+    <div id="library-container"></div>
+
+    <!-- Button to open the "New Book" form -->
+    <button onclick="document.getElementById('new-book-modal').style.display='block'">New Book</button>
+
+    <!-- Modal for adding a new book -->
+    <div id="new-book-modal" style="display: none;">
+        <form id="new-book-form">
+            <h2>Add a New Book</h2>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" required><br><br>
+
+            <label for="pages">Number of Pages:</label><br>
+            <input type="number" id="pages" name="pages" required><br><br>
+
+            <label for="read">Read:</label>
+            <input type="checkbox" id="read" name="read"><br><br>
+
+            <button type="submit">Add Book</button>
+            <button type="button" onclick="document.getElementById('new-book-modal').style.display='none'">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Link to the script -->
+    <script src="script.js"></script>
+</body>
+</html>
+
